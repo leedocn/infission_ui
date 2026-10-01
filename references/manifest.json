@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-30",
+  "purpose": "infission 开发参考素材清单；三张图片为用户提供的原始 Permitly 参考图，代码实现统一使用 infission；开发参考不代表生产资源许可。",
+  "assets": [
+    {
+      "id": "REF-01",
+      "path": "references/infission/01_global_dashboard_projects.png",
+      "kind": "image",
+      "role": "图 01 静态基线",
+      "source": "用户提供的聊天附件",
+      "width": 1055,
+      "height": 1491,
+      "mode": "RGB",
+      "bytes": 2008629,
+      "sha256": "1C35E4D6CF12856F8E828701BD208148A20BF3CC38291B61065E264FCB364D55",
+      "sourceBrand": "Permitly (原始参考图)",
+      "implementationBrand": "infission"
+    },
+    {
+      "id": "REF-02",
+      "path": "references/infission/02_detail_documents_compliance.png",
+      "kind": "image",
+      "role": "图 02 静态基线",
+      "source": "用户提供的聊天附件",
+      "width": 1055,
+      "height": 1491,
+      "mode": "RGB",
+      "bytes": 1853915,
+      "sha256": "D6E2A409AF8E6BF25A916A36C01D858C3AD7124E491F47D81E91D8BEC184DDDE",
+      "sourceBrand": "Permitly (原始参考图)",
+      "implementationBrand": "infission"
+    },
+    {
+      "id": "REF-03",
+      "path": "references/infission/03_workflows_submission_feedback.png",
+      "kind": "image",
+      "role": "图 03 静态基线",
+      "source": "用户提供的聊天附件",
+      "width": 1055,
+      "height": 1491,
+      "mode": "RGB",
+      "bytes": 1955151,
+      "sha256": "3239A2230E0B81CD52B7BB8F6E133A4DDFD6536CE29B1032B85343957427A2A5",
+      "sourceBrand": "Permitly (原始参考图)",
+      "implementationBrand": "infission"
+    },
+    {
+      "id": "VIDEO-01",
+      "path": "references/source/SaveTwitter.Net_4umFJcgPnteHPkhA_(1200p).mp4",
+      "kind": "video",
+      "role": "动效与页面关系参考",
+      "source": "用户提供的下载视频",
+      "bytes": 5582965,
+      "sha256": "3AA3AA770E5AE463D6459D9C6A426FCC13353C7D8C56FF0D146B919E622B2231",
+      "codec": "h264",
+      "width": 1600,
+      "height": 1200,
+      "avgFrameRate": "60/1",
+      "durationSeconds": 23.316667
+    },
+    {
+      "id": "A08-AVATAR-01",
+      "path": "references/infission/avatar-avery-chen.svg",
+      "kind": "image",
+      "role": "A08 preview support asset",
+      "source": "本地开发示例素材，非用户原始参考图",
+      "width": 160,
+      "height": 160,
+      "mode": "vector",
+      "bytes": 1077,
+      "sha256": "E9D8BE3C082F2E4E281D75F973935A747DCDF7F5AD5D9ABBBC43C99C1ED01896",
+      "sourceBrand": "infission",
+      "implementationBrand": "infission"
+    }
+  ]
+}

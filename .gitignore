@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.preview-build/
+.standalone-build/
+.storybook-static/
+*.tgz
+coverage/
+.vite/
+.turbo/
+*.tsbuildinfo
+tests/consumer-smoke/node_modules/
+tests/consumer-smoke/dist/

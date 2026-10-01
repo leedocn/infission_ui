@@ -1,0 +1,13 @@
+src/
+tests/
+scripts/
+docs/
+references/
+apps/
+.storybook/
+*.stories.*
+*.test.*
+tsconfig*.json
+vite.config.*
+vitest.config.*
+pnpm-lock.yaml

@@ -1,0 +1,144 @@
+.inf-workflow-dialog, .inf-workflow-package-panel, .inf-workflow-success, .inf-workflow-progress-overlay { font-family: var(--inf-font-sans); }
+.inf-badge.inf-workflow-badge--submitted { background: var(--inf-color-submitted-surface); color: var(--inf-color-submitted); }
+.inf-workflow-dialog { max-width: min(30rem, calc(100vw - 2rem)); animation: inf-workflow-dialog-in 180ms cubic-bezier(.2,.8,.2,1); }
+.inf-workflow-dialog::backdrop { background: rgb(17 18 20 / 44%); backdrop-filter: blur(2px); animation: inf-workflow-fade-in 160ms ease-out; }
+.inf-workflow-dialog .inf-dialog__inner { padding: 1.25rem; }
+.inf-workflow-dialog .inf-dialog__title { font-size: 1.125rem; font-weight: 750; letter-spacing: -.03em; }
+.inf-workflow-dialog .inf-dialog__description { font-size: .8125rem; line-height: 1.5; }
+.inf-workflow-dialog__section { background: var(--inf-color-surface-muted); border-radius: 1rem; padding: 1rem; }
+.inf-workflow-section-heading, .inf-workflow-subheading { align-items: center; display: flex; font-size: .8125rem; gap: 1rem; justify-content: space-between; }
+.inf-workflow-version { align-items: center; display: inline-flex; font-size: .6875rem; gap: .25rem; white-space: nowrap; }
+.inf-workflow-change-list { list-style: none; margin: .875rem 0 0; padding: 0; }
+.inf-workflow-change { align-items: flex-start; display: flex; gap: .75rem; padding: .875rem 0; }
+.inf-workflow-change + .inf-workflow-change { border-top: 1px solid var(--inf-color-border); }
+.inf-workflow-change__mark { align-items: center; background: var(--inf-color-brand); border-radius: 50%; display: inline-flex; flex: 0 0 1.625rem; height: 1.625rem; justify-content: center; line-height: 1; }
+.inf-workflow-change--removed .inf-workflow-change__mark { background: var(--inf-color-danger-surface); color: var(--inf-color-danger); }
+.inf-workflow-change__copy strong { display: block; font-size: .75rem; font-weight: 650; letter-spacing: -.01em; line-height: 1.5; }
+.inf-workflow-change__copy small { color: var(--inf-color-text-muted); display: block; font-size: .75rem; line-height: 1.5; margin-top: .25rem; }
+.inf-workflow-options, .inf-workflow-checklist, .inf-workflow-confirmations { border: 0; display: grid; gap: .5rem; margin: 1rem 0 0; padding: 0; }
+.inf-workflow-options legend, .inf-workflow-confirmations legend { clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; }
+.inf-workflow-options label, .inf-workflow-checklist label, .inf-workflow-confirmations label { align-items: flex-start; display: flex; font-size: .75rem; gap: .5rem; line-height: 1.45; overflow-wrap: anywhere; }
+.inf-workflow-options input, .inf-workflow-checklist input, .inf-workflow-confirmations input { accent-color: var(--inf-color-surface-inverse); cursor: pointer; flex: 0 0 1rem; height: 1rem; margin: 0; width: 1rem; }
+.inf-workflow-options input:focus-visible, .inf-workflow-checklist input:focus-visible, .inf-workflow-confirmations input:focus-visible { outline: 3px solid var(--inf-color-focus); outline-offset: 2px; }
+.inf-workflow-hint { align-items: center; color: var(--inf-color-text-muted); display: flex; font-size: .75rem; gap: .5rem; margin: 1rem 0 0; }
+.inf-workflow-error { background: var(--inf-color-danger-surface); border-radius: .75rem; color: var(--inf-color-danger); font-size: .8125rem; padding: .75rem; }
+.inf-workflow-package-panel { background: var(--inf-color-surface); border-radius: 1.5rem; color: var(--inf-color-text); padding: 1.5rem; }
+.inf-workflow-package-header { align-items: center; display: flex; gap: 1rem; justify-content: space-between; margin-bottom: 1rem; }
+.inf-workflow-package-header small { color: var(--inf-color-text-muted); font-size: .75rem; font-weight: 700; }
+.inf-workflow-package-header h2 { font-size: 1.125rem; letter-spacing: -.03em; margin: .25rem 0 0; }
+.inf-workflow-ready { align-items: center; background: var(--inf-color-brand); border-radius: 1rem; display: flex; gap: 1rem; min-width: 0; padding: 1.25rem; }
+.inf-workflow-ready--review { background: var(--inf-color-warning-surface); }
+.inf-workflow-ready--blocked { background: var(--inf-color-danger-surface); }
+.inf-workflow-ready__check { align-items: center; background: white; border-radius: 50%; display: inline-flex; flex: 0 0 3rem; font-size: 1.5rem; height: 3rem; justify-content: center; min-width: 3rem; width: 3rem; }
+.inf-workflow-ready--review .inf-workflow-ready__check { color: var(--inf-color-warning); }
+.inf-workflow-ready--blocked .inf-workflow-ready__check { color: var(--inf-color-danger); }
+.inf-workflow-ready > div { flex: 1 1 12rem; min-width: 0; }
+.inf-workflow-ready strong { display: block; font-size: 1.25rem; letter-spacing: -.035em; line-height: 1.2; overflow-wrap: anywhere; }
+.inf-workflow-ready p { font-size: .75rem; margin: .375rem 0 0; opacity: .7; }
+.inf-workflow-ready dl { align-items: center; display: flex; flex: 0 1 auto; flex-wrap: wrap; gap: 1rem; margin: 0; min-width: 0; }
+.inf-workflow-ready dl > div { min-width: 5rem; }
+.inf-workflow-ready dl > div + div { border-left: 1px solid rgb(0 0 0 / 15%); padding-left: 1rem; }
+.inf-workflow-ready dt { font-size: .625rem; opacity: .65; }
+.inf-workflow-ready dd { font-size: .875rem; font-weight: 750; margin: .25rem 0 0; }
+.inf-workflow-package-layout { align-items: start; display: grid; gap: 1rem; grid-template-columns: minmax(0, 1.65fr) minmax(15rem, 1fr); margin-top: 1rem; }
+.inf-workflow-subheading { align-items: flex-start; display: flex; flex-wrap: wrap; gap: .75rem 1rem; justify-content: space-between; }
+.inf-workflow-subheading > strong { min-width: 0; }
+.inf-workflow-subheading > span { color: var(--inf-color-text-muted); flex: 0 1 auto; max-width: 100%; }
+.inf-workflow-package-layout aside { display: grid; gap: 1rem; }
+.inf-workflow-package-content { border: 1px solid var(--inf-color-border); border-radius: 1rem; padding: 1rem; }
+.inf-workflow-subheading { margin-bottom: .75rem; }
+.inf-workflow-subheading span { background: var(--inf-color-surface-muted); border-radius: 99px; color: var(--inf-color-text-muted); font-size: .625rem; padding: .25rem .5rem; }
+.inf-workflow-package-group { background: var(--inf-color-surface-muted); border-radius: .875rem; padding: .75rem; }
+.inf-workflow-package-group + .inf-workflow-package-group { margin-top: .625rem; }
+.inf-workflow-package-group__heading { align-items: center; display: flex; font-size: .75rem; gap: .625rem; }
+.inf-workflow-package-group__heading strong { min-width: 0; overflow-wrap: anywhere; }
+.inf-workflow-package-group__heading .inf-badge { margin-left: auto; }
+.inf-workflow-package-group ul { list-style: none; margin: .5rem 0 0; padding: 0; }
+.inf-workflow-document { align-items: center; display: grid; gap: .625rem; grid-template-columns: auto minmax(0, 1fr) auto; min-width: 0; padding: .5rem 0; }
+.inf-workflow-document__check, .inf-workflow-document__checkbox { align-items: center; background: var(--inf-color-surface-inverse); border-radius: .25rem; color: var(--inf-color-on-surface-inverse, #fff); display: flex; flex: 0 0 1rem; font-size: .75rem; height: 1rem; justify-content: center; margin: 0; width: 1rem; }
+.inf-workflow-document__checkbox { accent-color: var(--inf-color-surface-inverse); cursor: pointer; }
+.inf-workflow-document__checkbox:focus-visible { outline: 3px solid var(--inf-color-focus); outline-offset: 2px; }
+.inf-workflow-document__check--pending { background: var(--inf-color-warning-surface); color: var(--inf-color-warning); }
+.inf-workflow-document__copy { min-width: 0; }
+.inf-workflow-document strong { display: block; font-size: .75rem; font-weight: 650; overflow-wrap: break-word; word-break: normal; }
+.inf-workflow-document small { color: var(--inf-color-text-muted); display: block; font-size: .625rem; margin-top: .2rem; }
+.inf-workflow-document__view { align-items: center; background: transparent; border: 0; color: var(--inf-color-text-muted); cursor: pointer; display: inline-flex; font: inherit; font-size: 1rem; justify-content: center; min-height: 2rem; min-width: 2rem; padding: .25rem; }
+.inf-workflow-document__view:not(button) { cursor: default; }
+.inf-workflow-document__view:focus-visible { outline: 3px solid var(--inf-color-focus); outline-offset: 2px; border-radius: .35rem; }
+.inf-workflow-document__view:hover { color: var(--inf-color-text); transform: translateY(-1px); }
+.inf-workflow-document.is-hidden { opacity: .58; }
+.inf-workflow-document.is-hidden .inf-workflow-document__copy strong { text-decoration: line-through; text-decoration-thickness: 1px; }
+.inf-workflow-package-group__icon { align-items: center; color: var(--inf-color-text-muted); display: inline-flex; flex: 0 0 auto; }
+.inf-workflow-change__mark svg { display: block; }
+.inf-workflow-change__mark { line-height: 0; }
+.inf-workflow-empty { color: var(--inf-color-text-muted); font-size: .75rem; line-height: 1.5; margin: .75rem 0 .25rem; }
+.inf-workflow-final-check { background: var(--inf-color-surface-inverse); border-radius: 1rem; color: var(--inf-color-on-surface-inverse, #fff); padding: 1rem; }
+.inf-workflow-final-check__heading { align-items: center; display: flex; font-size: .875rem; gap: .5rem; }
+.inf-workflow-final-check__heading > span { color: var(--inf-color-brand); }
+.inf-workflow-final-check__heading .inf-badge { margin-left: auto; }
+.inf-workflow-final-check p { color: rgb(255 255 255 / 65%); font-size: .75rem; line-height: 1.5; margin: .875rem 0; }
+.inf-workflow-final-check ul { display: grid; gap: .625rem; list-style: none; margin: 0; padding: 0; }
+.inf-workflow-final-check li { display: flex; font-size: .6875rem; gap: .5rem; line-height: 1.45; }
+.inf-workflow-final-check li > span { color: var(--inf-color-brand); }
+.inf-workflow-target { background: var(--inf-color-surface-muted); border-radius: 1rem; padding: 1rem; }
+.inf-workflow-target__heading { align-items: center; display: flex; gap: .625rem; }
+.inf-workflow-target__heading > div { min-width: 0; }
+.inf-workflow-target__heading strong { display: block; font-size: .8125rem; overflow-wrap: anywhere; }
+.inf-workflow-target__heading small { color: var(--inf-color-text-muted); display: block; font-size: .625rem; margin-top: .2rem; }
+.inf-workflow-target__heading .inf-badge { margin-left: auto; }
+.inf-workflow-target__icon { align-items: center; background: white; border-radius: 50%; display: flex; flex: 0 0 2rem; height: 2rem; justify-content: center; }
+.inf-workflow-target dl, .inf-workflow-summary { margin: .875rem 0 0; }
+.inf-workflow-target dl > div, .inf-workflow-summary > div { align-items: start; border-top: 1px solid var(--inf-color-border); display: flex; gap: 1rem; justify-content: space-between; padding: .625rem 0; }
+.inf-workflow-target dt, .inf-workflow-summary dt { color: var(--inf-color-text-muted); flex: 0 0 4rem; font-size: .6875rem; }
+.inf-workflow-target dd, .inf-workflow-summary dd { font-size: .6875rem; font-weight: 600; margin: 0; max-width: 70%; overflow-wrap: anywhere; text-align: right; }
+.inf-workflow-target--compact dl { display: none; }
+.inf-workflow-checklist { background: var(--inf-color-surface-muted); border-radius: 1rem; margin: 0; padding: 1rem; }
+.inf-workflow-checklist legend { float: left; font-size: .75rem; font-weight: 750; margin-bottom: .625rem; width: 100%; }
+.inf-workflow-package-actions { display: flex; gap: .625rem; justify-content: flex-end; margin-top: 1rem; }
+.inf-workflow-dialog-actions { display: flex; gap: .625rem; }
+.inf-workflow-progress-overlay { background: var(--inf-color-surface); border: 0; border-radius: 1rem; box-shadow: var(--inf-shadow-dialog); color: var(--inf-color-text); max-width: min(23rem, calc(100vw - 2rem)); padding: 0; width: 100%; animation: inf-workflow-dialog-in 180ms ease-out; }
+.inf-workflow-progress-overlay::backdrop { background: rgb(17 18 20 / 58%); backdrop-filter: blur(4px); }
+.inf-workflow-progress-card { align-items: center; display: flex; flex-direction: column; gap: .75rem; padding: 2rem; text-align: center; }
+.inf-workflow-progress-card h2 { font-size: 1rem; letter-spacing: -.02em; margin: 0; }
+.inf-workflow-progress-card p { color: var(--inf-color-text-muted); font-size: .75rem; line-height: 1.5; margin: 0 0 .25rem; }
+.inf-workflow-progress-icon { align-items: center; display: flex; height: 3.5rem; justify-content: center; margin: .5rem 0; width: 3.5rem; }
+.inf-workflow-progress-spinner { animation: inf-workflow-spin 850ms linear infinite; border: 3px solid var(--inf-color-border); border-top-color: var(--inf-color-surface-inverse); border-radius: 50%; height: 2.5rem; width: 2.5rem; }
+.inf-workflow-progress-overlay--submitted .inf-workflow-progress-icon { background: var(--inf-color-brand); border-radius: 50%; font-size: 1.5rem; }
+.inf-workflow-progress-overlay--failed .inf-workflow-progress-icon, .inf-workflow-progress-overlay--unknown .inf-workflow-progress-icon { background: var(--inf-color-warning-surface); border-radius: 50%; color: var(--inf-color-warning); font-size: 1.5rem; }
+.inf-workflow-progress-track { background: var(--inf-color-surface-muted); border-radius: 99px; height: .375rem; overflow: hidden; width: 100%; }
+.inf-workflow-progress-track span { background: var(--inf-color-brand); display: block; height: 100%; transform: scaleX(0); transform-origin: left center; transition: transform 250ms ease; width: 100%; }
+.inf-workflow-success { color: var(--inf-color-text); }
+.inf-workflow-success__banner { align-items: center; background: var(--inf-color-brand); border-radius: 1rem; display: flex; gap: .875rem; padding: 1rem; animation: inf-workflow-success-in 220ms ease-out; }
+.inf-workflow-success__banner > span { align-items: center; background: white; border-radius: 50%; display: flex; flex: 0 0 2.5rem; font-size: 1.25rem; height: 2.5rem; justify-content: center; }
+.inf-workflow-success__banner h2 { font-size: 1.125rem; letter-spacing: -.03em; margin: 0; }
+.inf-workflow-success__banner p { font-size: .625rem; margin: .25rem 0 0; opacity: .7; }
+.inf-workflow-success__banner .inf-badge { margin-left: auto; }
+.inf-workflow-success__actions { display: flex; gap: .625rem; margin-top: .75rem; }
+.inf-workflow-decision { background: var(--inf-color-surface-muted); border-radius: 1rem; display: flex; gap: 1.5rem; margin: 1rem 0 0; padding: 1rem; }
+.inf-workflow-decision > div { flex: 1; }
+.inf-workflow-decision > div + div { border-left: 1px solid var(--inf-color-border); padding-left: 1.5rem; }
+.inf-workflow-decision dt { color: var(--inf-color-text-muted); font-size: .6875rem; }
+.inf-workflow-decision dd { font-size: 1rem; font-weight: 750; letter-spacing: -.02em; margin: .25rem 0 0; }
+.inf-workflow-receipt { background: var(--inf-color-success-surface); border-radius: 1rem; margin-top: 1rem; padding: 1rem; }
+.inf-workflow-receipt p { color: var(--inf-color-text-muted); font-size: .75rem; line-height: 1.5; margin: .5rem 0; }
+.inf-workflow-receipt small { color: var(--inf-color-text-muted); font-size: .625rem; }
+.inf-workflow-next-steps { background: var(--inf-color-surface); border: 1px solid var(--inf-color-border); border-radius: 1rem; margin-top: 1rem; padding: 1rem; }
+.inf-workflow-next-steps h3 { font-size: .875rem; margin: 0 0 .875rem; }
+.inf-workflow-next-steps ol { display: grid; gap: .875rem; list-style: none; margin: 0; padding: 0; }
+.inf-workflow-next-steps li { align-items: start; color: var(--inf-color-text-muted); display: flex; font-size: .75rem; gap: .75rem; line-height: 1.45; }
+.inf-workflow-next-steps strong { font-weight: 500; }
+.inf-workflow-next-steps small { display: block; font-size: .6875rem; margin-top: .25rem; }
+@keyframes inf-workflow-dialog-in { from { opacity: 0; transform: translateY(10px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes inf-workflow-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes inf-workflow-spin { to { transform: rotate(360deg); } }
+@keyframes inf-workflow-success-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 760px) { .inf-workflow-package-layout { grid-template-columns: 1fr; } .inf-workflow-ready { align-items: flex-start; flex-wrap: wrap; } .inf-workflow-ready dl { flex-basis: 100%; padding-left: 4rem; } .inf-workflow-success__banner { flex-wrap: wrap; } }
+@media (max-width: 520px) { .inf-workflow-package-panel { padding: 1rem; } .inf-workflow-package-content { min-width: 0; padding: .75rem; } .inf-workflow-package-group { padding: .6rem; } .inf-workflow-document { align-items: flex-start; } .inf-workflow-document__copy { min-width: 0; } .inf-workflow-package-group__heading { align-items: flex-start; flex-wrap: wrap; } .inf-workflow-package-group__heading .inf-badge { margin-left: auto; } .inf-workflow-ready { display: grid; grid-template-columns: auto minmax(0, 1fr); } .inf-workflow-ready dl { grid-column: 1 / -1; padding-left: 0; width: 100%; } .inf-workflow-ready dl > div { flex: 1 1 6rem; } .inf-workflow-ready dl > div + div { border-left: 0; padding-left: 0; } .inf-workflow-ready strong { font-size: 1.05rem; } .inf-workflow-dialog__section { padding: .75rem; } .inf-workflow-dialog .inf-dialog__inner { padding: 1rem; } .inf-workflow-dialog .inf-workflow-target__heading { align-items: flex-start; flex-wrap: wrap; } .inf-workflow-dialog .inf-workflow-target__heading .inf-badge { margin-left: auto; } .inf-workflow-dialog .inf-workflow-summary > div { align-items: flex-start; flex-wrap: wrap; gap: .35rem .75rem; } .inf-workflow-dialog .inf-workflow-summary dt, .inf-workflow-dialog .inf-workflow-summary dd { flex: 1 1 8rem; max-width: 100%; text-align: left; } }
+@media (prefers-reduced-motion: reduce) { .inf-workflow-dialog, .inf-workflow-dialog::backdrop, .inf-workflow-progress-overlay, .inf-workflow-success__banner, .inf-workflow-progress-spinner { animation: none; } .inf-workflow-progress-track span { transition: none; } }
+
+/* Responsive audit: C11 stays legible when displayed in a narrow catalog column. */
+@media (min-width: 761px) {
+  .inf-workflow-ready { min-width: 0; }
+  .inf-workflow-ready > div { min-width: 0; }
+  .inf-workflow-ready strong, .inf-workflow-ready p, .inf-workflow-ready dt, .inf-workflow-ready dd { overflow-wrap: anywhere; }
+}

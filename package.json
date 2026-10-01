@@ -1,0 +1,44 @@
+{
+  "name": "infisson_ui",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Private React component library for infisson UI patterns.",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "preview": "vite --config vite.preview.config.ts",
+    "build:preview": "vite build --config vite.preview.config.ts",
+    "preview:update": "node scripts/build-standalone-preview.mjs",
+    "preview:verify": "pnpm preview:update && node scripts/verify-standalone-preview.mjs",
+    "docs:verify": "node scripts/validate-component-docs.mjs",
+    "storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build -o .storybook-static",
+    "build": "pnpm --filter infisson_ui build",
+    "dev": "pnpm --filter infisson_ui dev",
+    "typecheck": "pnpm --filter infisson_ui typecheck",
+    "lint": "pnpm --filter infisson_ui lint",
+    "test": "pnpm --filter infisson_ui test",
+    "pack:library": "pnpm --dir packages/infisson_ui run pack",
+    "test:consumer": "node scripts/test-consumer-package.mjs",
+    "copy:verify": "node scripts/verify-demo-copy.mjs",
+    "coverage:verify": "node scripts/verify-component-coverage.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/react": "^8.6.18",
+    "@storybook/react-vite": "^8.6.18",
+    "@types/node": "^24.19.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "storybook": "^8.6.18",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "infisson_ui": "workspace:*"
+  }
+}
